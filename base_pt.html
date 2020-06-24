@@ -1,0 +1,53 @@
+<!DOCTYPE html   na linha 15 para o ubuntu é necessário  /home/websig/Documentos/app/dados/casospor10k.geojson>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Mapa Nº Casos 26/05/2020</title>
+
+     
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" 
+		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" 
+		crossorigin="">
+                   
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" 
+        integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" 
+        crossorigin=""></script>
+        
+        <script type="text/javascript" src="dados/basecinza.geojson"></script>
+        
+        <style>
+
+        </style>
+
+    </head>
+    
+    
+    <body>
+        <div id="map" style="height: 100%"></div>
+
+        <script type="text/javascript">
+
+          var map = L.map('map', {
+              center: [39.6947566,-8.1324907],
+              zoom: 7
+          });
+
+
+       L.tileLayer('https://tile.jawg.io/jawg-dark/{z}/{x}/{y}.png?access-token=Rhdzpci9xIAsyRbAJUmsWYarbTsEz3RonCf5sHWzxtyenNNgL2BpBAsODmpWTze7', {}).addTo(map);
+
+
+        geojson = L.geoJson(data, {
+                weight: 1,
+                opacity: 0.5,
+                color: 'grey',
+                fillOpacity: 0
+        }).addTo(map);
+
+
+
+
+
+
+        </script>
+   
+
+</body></html>
